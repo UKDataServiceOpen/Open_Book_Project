@@ -1,4 +1,4 @@
-install.packages("haven")
+install.packages("ggplot2")
 install.packages("dplyr")
-install.packages("survey") 
-install.packages("srvyr")  
+install.packages("readr")
+install.packages("haven")
