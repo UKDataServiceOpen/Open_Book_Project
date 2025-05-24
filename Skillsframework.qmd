@@ -1,7 +1,9 @@
 ---
 title: "Open book project: Skills framework"
-format: html
-editor: visual
+format:
+  html:
+    toc: true
+Editor: visual
 Author: Jen Buckley, UK Data Service, University of Manchester
 ---
 
