@@ -13,7 +13,7 @@ This document presents version 1 of a skills framework for creating Jupyter Note
 
 # 1 Tool Knowledge, installation and setup
 
-## 1.1 Understand purpose of tools 
+## 1.1 Understand purpose of tools
 
 Understands the purpose and typical use cases for the following tools:
 
@@ -33,7 +33,7 @@ Knows which tools need to be installed separately, e.g.:
 
 -   Understands that Git must be installed for local version control and GitHub is used for remote sharing and collaboration.
 
-## 1.3 Comfortable working with system administration basics 
+## 1.3 Comfortable working with system administration basics
 
 Installing and configuring tools like Jupyter, Quarto, Python, R, and Git may require some basic system administration skills— such as modifying environment variables (e.g. the PATH) or resolving permission issues. While support is often available from IT services or AI tools, a degree of confidence and comfort with these tasks is beneficial.
 
@@ -43,7 +43,7 @@ Comfortable using the command line, especially for setup and troubleshooting tas
 
 # 2 Document authoring
 
-## 2.1 Use Markdown 
+## 2.1 Use Markdown
 
 Uses Markdown (or Quarto’s visual mode) to write clear, structured text, including:
 
@@ -57,7 +57,7 @@ Uses Markdown (or Quarto’s visual mode) to write clear, structured text, inclu
 
 Recognises that Quarto’s visual editor can support formatting without requiring deep knowledge of Markdown.
 
-## 2.2 Manages data appropriately  
+## 2.2 Manages data appropriately 
 
 Organises and stores data files clearly and appropriately, considering licensing and reproducibility. Able to read data into the notebook or document correctly using code.
 
@@ -65,11 +65,11 @@ Organises and stores data files clearly and appropriately, considering licensing
 
 Writes well-structured, readable, and commented code in a language supported by Jupyter or Quarto (e.g. Python, R). Uses appropriate libraries or packages for the task, and ensures the code runs from start to finish without errors, producing consistent and reproducible results.
 
-## 2.4 Use code cells and chunks 
+## 2.4 Use code cells and chunks
 
 Organises content using code cells (Jupyter) or code chunks (Quarto) and manages what code/output is shown to the reader.
 
-## 2.5 Configure Quarto YAML 
+## 2.5 Configure Quarto YAML
 
 Adds and edits YAML metadata (e.g. title, author, output format), and uses options to tailor document rendering.
 
@@ -105,7 +105,7 @@ Creates and manages repositories on GitHub. Pushes/pulls files, manages public v
 
 Uses GitHub to store and distribute notebooks or Quarto documents. Adds README files and metadata to support discoverability and usability.
 
-## 4.4 Publishes using services like GitHub Pages and Binder 
+## 4.4 Publishes using services like GitHub Pages and Binder
 
 Uses services such as GitHub Pages to publish rendered Quarto documents as websites, or Binder to launch interactive versions of Jupyter notebooks. Understands the basic setup and maintenance involved in making content accessible and executable online.
 

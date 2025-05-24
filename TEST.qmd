@@ -5,11 +5,9 @@ Jupyter: ir
 editor: visual
 ---
 
-![](images/ChatGPT Image May 24, 2025, 03_22_21 PM.png){width="785"}
-
 **Should car users pay more tax? Should we reduce car use for the sake of the environment?**
 
-This book uses R coding to explore public attitudes. Follow the steps to create
+This book uses R coding to explore public attitudes to car use and environmental crisis. Follow the steps to create
 
 -   descriptive statistics.
 
@@ -17,7 +15,7 @@ This book uses R coding to explore public attitudes. Follow the steps to create
 
 ## Set-up
 
-Run the code below before starting the exercise, this code opens packages we need to analyse the data. The \# are notes that explain the purpose of the code. Annotating code helps humans understand what is going on.
+Run the code below before starting the exercise, this code opens packages we need to analyse the data. The \### are notes that explain the purpose of the code. Annotating code helps humans understand what is going on.
 
 ```{r, echo=TRUE, results='hide', warning=FALSE, message=FALSE}
 
