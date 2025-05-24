@@ -1,24 +1,28 @@
 **Welcome to the Open Book Project!**
 
-The Open Book Project is an initiative that combines open teaching datasets from the UK Data Service with Quarto and Jupyter Notebooks.
+The **Open Book Project** is an initiative that combines open teaching datasets from the UK Data Service with Quarto and Jupyter Notebooks.
 
-The project aims:
+**Project aims**
 
--   to create adaptable teaching resources for educators.
+-   To create adaptable teaching resources for educators.
 
--   to enhance reproducibility skills among students. 
+-   To enhance reproducibility skills among students. 
 
 ## Open books
 
-The first aim is to develop Open books, which are versatile teaching resources that can be used and adapted as needed. Each open book combines data, code and text introduction data analysis skills. They will be available in a variety of formats:
+The project will develop **Open books** – versatile teaching resources that integrate data, code and narrative text to introduce data analysis skills. These resources are desgined to be used as they are or adapted to suit teaching needs.
 
--   html - for a static version.
+Each Open Book is available in multiple formats:
 
--   Quarto (qmd) and Jupyter notebook (.ipynd) for using and adapting locally.
+-   html - for a static, read-only viewing.
 
--   Via Binder for online interactive analysis.
+-   Quarto (.qmd) and Jupyter notebook (.ipynb) - for local use and editing.
 
-The open books are in development. But you can explore an example book 'Reduce care use?'.
+-   Binder for interactive online analysis without local set-up
+
+The open books are currently in development. You can already explore an example:
+
+**'Reduce care use?'** [html](https://ukdataserviceopen.github.io/Open_Book_Project/TEST),
 
 ## Skills framework
 
