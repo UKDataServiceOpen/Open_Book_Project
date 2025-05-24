@@ -1,0 +1,155 @@
+---
+title: "Change over time? Interest in politics"
+format: html
+Jupyter: ir
+editor: visual
+---
+
+This book explores whether interest in politics has changed over time. Follow the code below, to examine data from the British Social Attitudes survey from 2017, 2019 and 2021.
+
+```{r}
+library(haven)  ### To open Stata or SPSS datasets
+library(dplyr)
+library(ggplot2)
+library(srvyr)  # simplified syntax for survey analysis
+
+```
+
+## Data
+
+The exercise uses three datasets from the British Social Attitudes Survey. Start by reading in the data for the three years.
+
+```{r read data}
+BSA2017 <- read_dta("https://github.com/UKDataServiceOpen/Open_data/raw/refs/heads/master/bsa2017_open_enviropol.dta")
+BSA2019<- read_dta("https://github.com/UKDataServiceOpen/Open_data/raw/refs/heads/master/bsa2019_poverty_open.dta")
+BSA2021<- read_dta("https://github.com/UKDataServiceOpen/Open_data/raw/refs/heads/master/bsa2021_healthcare_equalities_open.dta")
+
+
+
+library(haven)
+
+# Remove labels and ensure numeric
+BSA2021 <- BSA2021 %>%
+  mutate(BSA21_final_wt = zap_labels(BSA21_final_wt))  # removes attached labels
+
+BSA2017 <- BSA2017 %>%
+  mutate(WtFactor = zap_labels(WtFactor),
+         WtFactor = ifelse(WtFactor < 0, NA, WtFactor))
+
+BSA2019 <- BSA2019 %>%
+  mutate(WtFactor = zap_labels(WtFactor),
+         WtFactor = ifelse(WtFactor < 0, NA, WtFactor))
+
+
+
+```
+
+## Interest in politics
+
+```{r}
+BSA2017$Politics<-as_factor(BSA2017$Politics)      #Create a new factor variable 
+BSA2019$Politics<-as_factor(BSA2019$Politics)  
+BSA2021$Politics<-as_factor(BSA2021$Politicsx)  
+
+
+BSA2017 |> select(Politics) |> 
+           summary()
+BSA2019 |> select(Politics) |> 
+           summary()
+BSA2021 |> select(Politics) |> 
+           summary()
+
+
+
+
+```
+
+Eeek! our variable needs harmonizing across the years.
+
+```{r}
+harmonise_politics <- function(x) {
+  x <- tolower(trimws(as.character(x)))
+  case_when(
+    x %in% c("... a great deal,", "a great deal", "quite a lot,", "quite a lot") ~ "Great deal or quite a lot",
+    x %in% c("some,", "some") ~ "Some",
+    x %in% c("not very much,", "not very much") ~ "Not very much",
+    x %in% c("or, none at all?", "none at all") ~ "None at all",
+    TRUE ~ NA_character_
+  )
+}
+
+
+```
+
+```{r}
+BSA2017_clean <- BSA2017 %>%
+  rename(weight = WtFactor) %>% #rename weight
+  mutate(
+    Politics = harmonise_politics(Politics), #harmonise Politics variable
+    Year = 2017 #create variable to indicate year
+  ) %>%
+  filter(!is.na(Politics)) %>% # Remove cases where Politics is NA (e.g. refusals, don't knows)
+  select(Politics, weight, Year) #Selecting variables we need
+
+BSA2019_clean <- BSA2019 %>%
+  rename(weight = WtFactor) %>%
+  mutate(
+    Politics = harmonise_politics(Politics),
+    Year = 2019
+  ) %>%
+  filter(!is.na(Politics)) %>%
+  select(Politics, weight, Year)
+
+BSA2021_clean <- BSA2021 %>%
+  rename(weight = BSA21_final_wt) %>%
+  mutate(
+    Politics = harmonise_politics(Politics),
+    Year = 2021
+  ) %>%
+  filter(!is.na(Politics)) %>%
+  select(Politics, weight, Year)
+
+```
+
+```{r}
+# Combine datasets if you haven’t already
+combined_data <- bind_rows(BSA2017_clean, BSA2019_clean, BSA2021_clean)
+
+# Set up survey design
+svy_data <- as_survey_design(combined_data, ids = NULL, weights = "weight")
+
+
+# Calculate weighted proportions by year and interest category
+
+politics_summary <- svy_data %>%
+  filter(Politics == "Great deal or quite a lot") %>%
+  group_by(Year) %>%
+  summarise(proportion = survey_mean(vartype = "ci"), .groups = "drop")
+
+
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(politics_summary, aes(x = Year, y = proportion)) +
+  geom_line(size = 1.2, colour = "steelblue") +
+  geom_point(size = 3, colour = "steelblue") +
+  geom_errorbar(aes(ymin = proportion_low, ymax = proportion_upp), width = 0.2, linewideth=1) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(
+    title = "Proportion Saying 'Great deal or quite a lot' of Interest in Politics",
+    x = "Year",
+    y = "Weighted Percentage"
+  ) +
+  theme_minimal()
+
+
+```
+
+```         
+```
+
+```         
+```

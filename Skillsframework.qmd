@@ -1,0 +1,120 @@
+---
+title: "Open book project: Skills framework"
+format: html
+editor: visual
+Author: Jen Buckley, UK Data Service, University of Manchester
+---
+
+![](logo.jpeg){width="79"}
+
+**What skills are needed to create effective, clear, and functional Jupyter Notebooks or Quarto documents?**
+
+This document presents version 1 of a skills framework for creating Jupyter Notebooks or Quarto documents. Its aim is to support educators, trainers, and learners in developing the skills required for working with these tools. The framework focuses on essential competencies for using Jupyter and Quarto effectively, rather than broader data analysis skills.
+
+# 1 Tool Knowledge, installation and setup
+
+## 1.1 Understand purpose of tools 
+
+Understands the purpose and typical use cases for the following tools:
+
+-   **Jupyter**: for interactive data exploration and analysis
+
+-   **Quarto**: for creating structured, shareable, and reproducible documents
+
+-   **Python / R**: for performing data analysis
+
+-   **Git / GitHub**: for version control and collaboration
+
+## 1.2 Install required tools
+
+Knows which tools need to be installed separately, e.g.:
+
+-   Jupyter and Quarto are installed in addition to Python or R.
+
+-   Understands that Git must be installed for local version control and GitHub is used for remote sharing and collaboration.
+
+## 1.3 Comfortable working with system administration basics 
+
+Installing and configuring tools like Jupyter, Quarto, Python, R, and Git may require some basic system administration skills— such as modifying environment variables (e.g. the PATH) or resolving permission issues. While support is often available from IT services or AI tools, a degree of confidence and comfort with these tasks is beneficial.
+
+## 1.4 Use of Command line
+
+Comfortable using the command line, especially for setup and troubleshooting tasks. While many tasks can be completed through graphical interfaces, some actions—such as software installation, rendering documents, navigating directories, or resolving environment issues—are often easier or only possible via the command line.
+
+# 2 Document authoring
+
+## 2.1 Use Markdown 
+
+Uses Markdown (or Quarto’s visual mode) to write clear, structured text, including:
+
+-   Headings
+
+-   Emphasis (bold/italics)
+
+-   Hyperlinks
+
+-   Equations (using LaTeX, where needed)
+
+Recognises that Quarto’s visual editor can support formatting without requiring deep knowledge of Markdown.
+
+## 2.2 Manages data appropriately  
+
+Organises and stores data files clearly and appropriately, considering licensing and reproducibility. Able to read data into the notebook or document correctly using code.
+
+## 2.3 Write clean, reproducible code
+
+Writes well-structured, readable, and commented code in a language supported by Jupyter or Quarto (e.g. Python, R). Uses appropriate libraries or packages for the task, and ensures the code runs from start to finish without errors, producing consistent and reproducible results.
+
+## 2.4 Use code cells and chunks 
+
+Organises content using code cells (Jupyter) or code chunks (Quarto) and manages what code/output is shown to the reader.
+
+## 2.5 Configure Quarto YAML 
+
+Adds and edits YAML metadata (e.g. title, author, output format), and uses options to tailor document rendering.
+
+## 2.6 Present Output Clearly
+
+Ensures that code outputs are clean, relevant, and easy to interpret. Avoids overwhelming readers with unnecessary print statements or large raw outputs. Aligns outputs with narrative.
+
+# 3 Rendering, publishing and sharing
+
+## 3.1 Render documents
+
+Knows how to render Quarto or Jupyter documents using either the interface or command line into formats such as HTML, PDF, or Word. Understands how output format affects structure and appearance. Aware that some formats (e.g. PDF) require additional tools like LaTeX.
+
+## 3.2 Control output visibility
+
+Uses tool-specific features (e.g. code chunk options, notebook metadata) to manage what is shown in the final document—such as hiding code, showing outputs only, or suppressing warnings. Produces clean, focused documents suitable for readers.
+
+## 3.3 Publish and Share Documents
+
+Publishes notebooks or Quarto documents using tools like GitHub Pages, Quarto Pub, Binder, or Google Colab. Understands the difference between sharing source code vs rendered documents.
+
+# 4 Version control and collaboration (with Git and GitHub)
+
+## 4.1 Use Git for version control
+
+Tracks changes using Git, commits appropriately using meaningful messages, and manages local repositories.
+
+## 4.2 Use GitHub for Collaboration
+
+Creates and manages repositories on GitHub. Pushes/pulls files, manages public vs private settings, and collaborates with others through issues, pull requests, or branching.
+
+## 4.3 Share Work via GitHub
+
+Uses GitHub to store and distribute notebooks or Quarto documents. Adds README files and metadata to support discoverability and usability.
+
+## 4.4 Publishes using services like GitHub Pages and Binder 
+
+Uses services such as GitHub Pages to publish rendered Quarto documents as websites, or Binder to launch interactive versions of Jupyter notebooks. Understands the basic setup and maintenance involved in making content accessible and executable online.
+
+# 5 Troubleshooting and support seeking
+
+## 5.1 Troubleshooting skills
+
+Can search effectively for solutions (e.g. Stack Overflow, GitHub Issues) and address common problems related to rendering, setup, or sharing.
+
+## 5.2 Seeks Support Proactively
+
+Knows when and how to seek help—from IT teams, forums, peers, AI.
