@@ -22,4 +22,4 @@ The open books are in development. But you can explore an example book 'Reduce c
 
 ## Skills framework
 
-What skills are needed to create effective, clear, and functional Jupyter Notebooks or Quarto documents? The Open Book project presents [version 1 of a skills framework] (https://ukdataserviceopen.github.io/Open_Book_Project/Skillsframework) for creating Jupyter Notebooks or Quarto documents.
+What skills are needed to create effective, clear, and functional Jupyter Notebooks or Quarto documents? The Open Book project presents [version 1 of a skills framework](https://ukdataserviceopen.github.io/Open_Book_Project/Skillsframework) for creating Jupyter Notebooks or Quarto documents.
