@@ -20,6 +20,6 @@ The first aim is to develop Open books, which are versatile teaching resources t
 
 The open books are in development. But you can explore an example book 'Reduce care use?'.
 
-## Skills framwork
+## Skills framework
 
 What skills are needed to create effective, clear, and functional Jupyter Notebooks or Quarto documents? The Open Book project presents version 1 of a skills framework for creating Jupyter Notebooks or Quarto documents.
