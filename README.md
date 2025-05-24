@@ -22,7 +22,7 @@ Each Open Book is available in multiple formats:
 
 The open books are currently in development. You can already explore an example:
 
-**'Reduce care use?'** [html](https://ukdataserviceopen.github.io/Open_Book_Project/TEST),
+**'Reduce care use?'** [html](https://ukdataserviceopen.github.io/Open_Book_Project/TEST), [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UKDataServiceOpen/Open_Book_Project/HEAD?urlpath=%2Fdoc%2Ftree%2FTEST.ipynb)
 
 ## Skills framework
 
