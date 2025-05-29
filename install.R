@@ -1,6 +1,9 @@
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("readr")
-install.packages("haven")
+install.packages(c(
+  "ggplot2",
+  "dplyr",
+  "readr",
+  "haven",
+  "IRkernel"
+))
 
 IRkernel::installspec(user = FALSE)
