@@ -2,3 +2,5 @@ install.packages("ggplot2")
 install.packages("dplyr")
 install.packages("readr")
 install.packages("haven")
+
+IRkernel::installspec(user = FALSE)
