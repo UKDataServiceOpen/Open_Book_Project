@@ -15,7 +15,7 @@ This book uses R coding to explore public attitudes to car use and environmental
 
 ## Set-up
 
-Run the code below before starting the exercise, this code opens packages we need to analyse the data. The ### are notes that explain the purpose of the code. Annotating code helps humans understand what is going on.
+Run the code below before starting the exercise, this code opens packages we need to analyse the data. The \### are notes that explain the purpose of the code. Annotating code helps humans understand what is going on.
 
 ```{r, echo=TRUE, results='hide', warning=FALSE, message=FALSE}
 
@@ -23,8 +23,6 @@ Run the code below before starting the exercise, this code opens packages we nee
 
 library(haven)  ### To open Stata or SPSS datasets
 library(dplyr)  ### For data manipulation 
-library(survey) ### For survey data analysis 
-library(srvyr)  ### For manipulation of survey data
 
 ```
 
